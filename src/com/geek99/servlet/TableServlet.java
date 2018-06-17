@@ -45,14 +45,22 @@ public class TableServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//String flag = request.getParameter("flag");
+		String flag = request.getParameter("flag");
 		TableDao dao = new TableDaoImpl();
-        List<Table> list = dao.getAllTables();
+		List<Table> list;
+		if(flag!=null&&flag.equals("0")){
+			list = dao.getEmptyTables();
+		}/*else if(flag!=null&&flag.equals("1")){
+			list = dao.getEatingTables();
+		}*/else{
+			list = dao.getAllTables();
+		}
+		// json
 		Gson gson = new Gson();
 		Type type = new TypeToken<List<Table>>(){}.getType();
 		String json = gson.toJson(list, type);
 		PrintWriter out = response.getWriter();
-		out.print(json);	
+		out.print(json);
 		
 	}
 
