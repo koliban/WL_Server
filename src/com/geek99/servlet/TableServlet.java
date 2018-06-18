@@ -50,9 +50,9 @@ public class TableServlet extends HttpServlet {
 		List<Table> list;
 		if(flag!=null&&flag.equals("0")){
 			list = dao.getEmptyTables();
-		}/*else if(flag!=null&&flag.equals("1")){
+		}else if(flag!=null&&flag.equals("1")){
 			list = dao.getEatingTables();
-		}*/else{
+		}else{
 			list = dao.getAllTables();
 		}
 		// json

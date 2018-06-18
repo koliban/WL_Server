@@ -20,7 +20,7 @@ public class OrderDaoImpl implements OrderDao{
 //				  `tid` int(11) DEFAULT NULL,
 //				  `description` varchar(20) DEFAULT NULL,
 //				  `personNum` int(11) DEFAULT NULL,
-//				  `isPay` int(11) DEFAULT '0' COMMENT '0:1:',
+//				  `isPay` int(11) DEFAULT '0' COMMENT '0:Î´½áËã 1: ½áËã',
 //				  PRIMARY KEY (`id`)
 //				)DEFAULT CHARSET=gbk;
 		String sql = "insert into OrderTbl(ctime,uid,tid,description,personNum,isPay) values(?,?,?,?,?,?) ";
