@@ -19,4 +19,14 @@
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>  
   
+   <servlet>
+    <servlet-name>QueryOrderServlet</servlet-name>
+    <servlet-class>com.geek99.servlet.QueryOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryOrderServlet</servlet-name>
+    <url-pattern>/QueryOrderServlet</url-pattern>
+  </servlet-mapping>  
+  
+  
 </web-app>

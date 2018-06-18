@@ -27,7 +27,8 @@ public class OrderDaoImpl implements OrderDao{
 		Connection conn = ConnectionUtil.open();
 		
 		try {
-			conn.setAutoCommit(false);			
+			conn.setAutoCommit(false);
+			
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, o.getCtime());
 			pstmt.setInt(2, o.getUid());
@@ -36,8 +37,9 @@ public class OrderDaoImpl implements OrderDao{
 			pstmt.setInt(5, o.getPersonNum());
 			pstmt.setInt(6, 0);
 			pstmt.executeUpdate();
+			
 			String sql2 = "select max(id) from OrderTbl";
-		    Statement stmt = conn.createStatement();
+			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql2);
 			if(rs.next()){
 				int oid = rs.getInt(1);
@@ -78,7 +80,7 @@ public class OrderDaoImpl implements OrderDao{
 		return 1;
 	}
 	
-/*	@Override
+	@Override
 	public QueryOrder queryOrder(int tid) {
 		String sql = " select ot.`ctime`," + " ut.`username`," + " ot.`tid`,"
 				+ " ot.`personNum`" + " from orderTbl as ot"
@@ -201,6 +203,6 @@ public class OrderDaoImpl implements OrderDao{
 		
 		return 1;
 	}
-*/
+
 
 }
