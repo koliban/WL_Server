@@ -41,6 +41,7 @@ public class QueryOrderServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/html;charset=gbk");
 		OrderDao dao = new OrderDaoImpl();
 		String stid = request.getParameter("tid");
 		int tid = Integer.parseInt(stid);

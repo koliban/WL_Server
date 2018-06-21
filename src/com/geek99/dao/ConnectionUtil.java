@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class ConnectionUtil {
 	public static Connection open(){
-		String driver = "com.mysql.cj.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/WL_DB?useUnicode=true&characterEncoding=gbk";
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/WL_DB?useUnicode=true&characterEncoding=UTF-8";
 		String username = "root";
 		String password = "12131415";
 		

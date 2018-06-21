@@ -33,5 +33,21 @@
     <servlet-name>PayServlet</servlet-name>
     <url-pattern>/PayServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ChangeServlet</servlet-name>
+    <servlet-class>com.geek99.servlet.ChangeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangeServlet</servlet-name>
+    <url-pattern>/ChangeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UnionServlet</servlet-name>
+    <servlet-class>com.geek99.servlet.UnionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UnionServlet</servlet-name>
+    <url-pattern>/UnionServlet</url-pattern>
+  </servlet-mapping>
   
 </web-app>

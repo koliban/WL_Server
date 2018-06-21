@@ -44,9 +44,9 @@ public class PayServlet extends HttpServlet {
 		int r = dao.pay(tid);
 		PrintWriter out = response.getWriter();	
 		if(r==1){
-			out.print("结算成功！");
+			out.print("Success");
 		}else{
-			out.print("结算失败");
+			out.print("failure");
 		}
 		
 	}

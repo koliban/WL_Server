@@ -58,9 +58,9 @@ public class OrderServlet extends HttpServlet {
 		int r = dao.addOrder(o);
 		PrintWriter out = response.getWriter();
 		if(r==1){
-			out.print("成功下订单！");
+			out.print("Success");
 		}else{
-			out.print("订单失败！");
+			out.print("failure");
 		}
 	}
 
